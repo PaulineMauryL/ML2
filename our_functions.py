@@ -31,9 +31,9 @@ def get_data(neg, pos):
     tweets_pos.extend(tweets_neg)
     X = tweets_pos
 
-    #one = np.ones(int(len(X)/2))
-    one = np.ones((int(len(X)/2),), dtype=int)
-    Y = np.r_[one, -one]
+    Y_one = [1 for _ in range(int(len(X)/2))]
+    Y_minus_one = [-1 for _ in range(int(len(X)/2)) ]
+    Y = [*Y_one, *Y_minus_one]
     
     return X, Y
 
