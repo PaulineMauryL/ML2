@@ -31,17 +31,33 @@ def get_data(neg, pos):
     tweets_pos.extend(tweets_neg)
     X = tweets_pos
 
-    one = np.ones(int(len(X)/2))
-    Y = np.r_[one, -one]
+    Y_one = [1 for _ in range(int(len(X)/2))]
+    Y_minus_one = [-1 for _ in range(int(len(X)/2)) ]
+    Y = [*Y_one, *Y_minus_one]
     
     return X, Y
+
+def train_prepro(X,Y):
+    """remove the tweets that are identical
+       --> we do it only for the train (and not the validation)
+    """
+    for i in range(len(X)-1):
+        while X[i] == X[i+1]:
+            X.pop(i+1)
+            Y.pop(i+1)
+    
+    Y.index(-1)
+    one = np.ones(Y.index(-1), dtype = int)
+    minus_one = (-1)*np.ones( len(Y) - Y.index(-1) , dtype = int)
+    Y = np.r_[one, minus_one]
+    
+    return X,Y
 
 def one_hot(Y):
     Y_hot = np.empty([Y.shape[0], 2])
     Y_hot[Y==1]  = [1, 0]
     Y_hot[Y==-1] = [0, 1]
     return Y_hot
-
 
 def softmax(x):
     """Compute softmax values for each sets of scores in x."""
