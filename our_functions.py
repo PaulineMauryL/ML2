@@ -1,4 +1,27 @@
 import numpy as np 
+from sklearn.utils import shuffle
+
+def get_data_v2(pos = "./datasets/train_pos.txt", neg = "./datasets/train_neg.txt"):
+    X_pos = read_data("./datasets/train_pos.txt")
+    X_neg = read_data("./datasets/train_neg.txt")
+    X_train = np.concatenate((X_pos, X_neg), axis = 0)
+    
+    Y_pos = np.ones(len(X_pos))
+    Y_neg = np.ones(len(X_neg)) * (-1)
+    Y_train = np.concatenate((Y_pos, Y_neg), axis = 0)
+    
+    X_train_shuffled, Y_train_shuffled = shuffle(X_train, Y_train, random_state=0)
+    
+    return X_train, Y_train
+
+def read_data(data):
+    with open(data, "r") as file:
+        tweets = str()
+        for _,line in enumerate(file):
+            tweets += line
+        tweets = tweets.split('\n')
+        del tweets[-1]
+    return tweets
 
 
 def get_data(neg, pos):
@@ -106,10 +129,15 @@ def sentence_to_avg(tweet, word_to_vec_map,size=20):
     words = [x.lower() for x in tweet.split()]
     # Initialize the average word vector
     avg = np.zeros((size,))
+    
+    nb = 0
     # Average the word vectors
     for w in words:
-        avg += word_to_vec_map[w]
-    avg = avg/len(words)
+        if w in word_to_vec_map.keys():
+            avg += word_to_vec_map[w]
+            nb = nb + 1
+    if nb > 0:
+        avg = avg/nb
     
     return avg
 
