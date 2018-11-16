@@ -54,8 +54,8 @@ def train_prepro(X,Y):
     return X,Y
 
 def one_hot(Y):
-    Y_hot = np.empty([Y.shape[0], 2])
-    Y_hot[Y==1]  = [1, 0]
+    Y_hot = np.empty([len(Y), 2])
+    Y_hot[Y== 1] = [1, 0]
     Y_hot[Y==-1] = [0, 1]
     return Y_hot
 
@@ -124,7 +124,7 @@ def predict(X, Y, W, b, word_to_vec_map):
     Returns:
     pred -- numpy array of shape (m, 1) with your predictions
     """
-    m = X.shape[0]
+    m = len(X)
     pred = np.zeros((m, 1))
     
     for j in range(m):                       # Loop over training examples
@@ -134,9 +134,15 @@ def predict(X, Y, W, b, word_to_vec_map):
         
         # Average words' vectors
         avg = np.zeros((20,))
-        for w in words:
+        
+    nb = 0
+    # Average the word vectors
+    for w in words:
+        if w in word_to_vec_map.keys():
             avg += word_to_vec_map[w]
-        avg = avg/len(words)
+            nb = nb + 1
+    if nb > 0:
+        avg = avg/nb
 
         # Forward propagation
         Z = np.dot(W, avg) + b
