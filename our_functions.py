@@ -1,35 +1,62 @@
 import numpy as np 
-import pickle
-from sklearn.utils import shuffle
 
-def read_data(data):
-    with open(data, "r") as file:
+
+def get_data(neg, pos):
+    with open(neg, "r") as file: #read only
+        #tweets = list()
         tweets = str()
-        for _,line in enumerate(file):
-            tweets += line
-        tweets = tweets.split('\n')
-        del tweets[-1]
-    return tweets
 
+        for idx ,line in enumerate(file):
+            #tweets.append(line)
+            tweets+= line
 
-def get_data_v2(pos = "./datasets/train_pos.txt", neg = "./datasets/train_neg.txt"):
-    X_pos = read_data(pos)
-    X_neg = read_data(neg)
-    X_train = np.concatenate((X_pos, X_neg), axis = 0)
-    
-    Y_pos = np.ones(len(X_pos))
-    Y_neg = np.zeros(len(X_neg))
-    Y_train = np.concatenate((Y_pos, Y_neg), axis = 0)
-    
-    X_train_shuffled, Y_train_shuffled = shuffle(X_train, Y_train, random_state=0)
-    
-    return X_train, Y_train
+    tweets = tweets.split('\n')
+    del tweets[-1] #deletes last item
 
+    tweets_neg = tweets
+
+    with open(pos, "r") as file: #read only
+        #tweets = list()
+        tweets = str()
+
+        for idx ,line in enumerate(file):
+            #tweets.append(line)
+            tweets+= line
+
+    tweets = tweets.split('\n')
+    del tweets[-1] #deletes last item
+
+    tweets_pos = tweets
+
+    tweets_pos.extend(tweets_neg)
+    X = tweets_pos
+
+    Y_one = [1 for _ in range(int(len(X)/2))]
+    Y_minus_one = [-1 for _ in range(int(len(X)/2)) ]
+    Y = [*Y_one, *Y_minus_one]
+    
+    return X, Y
+
+def train_prepro(X,Y):
+    """remove the tweets that are identical
+       --> we do it only for the train (and not the validation)
+    """
+    for i in range(len(X)-1):
+        while X[i] == X[i+1]:
+            X.pop(i+1)
+            Y.pop(i+1)
+    
+    Y.index(-1)
+    one = np.ones(Y.index(-1), dtype = int)
+    minus_one = (-1)*np.ones( len(Y) - Y.index(-1) , dtype = int)
+    Y = np.r_[one, minus_one]
+    
+    return X,Y
 
 def one_hot(Y):
     Y_hot = np.empty([len(Y), 2])
     Y_hot[Y== 1] = [1, 0]
-    Y_hot[Y== 0] = [0, 1]
+    Y_hot[Y==-1] = [0, 1]
     return Y_hot
 
 def softmax(x):
@@ -77,82 +104,19 @@ def sentence_to_avg(tweet, word_to_vec_map,size=20):
     """
     # Split sentence into list of lower case words
     words = [x.lower() for x in tweet.split()]
+    
     # Initialize the average word vector
     avg = np.zeros((size,))
-
-    nb = 0
+    
     # Average the word vectors
     for w in words:
+        
         if w in word_to_vec_map.keys():
             avg += word_to_vec_map[w]
-            nb = nb + 1
-    
-    if nb > 0:
-        avg = avg/nb
+            
+    avg = avg/len(words)
     
     return avg
-
-
-
-def model(X, Y, word_to_vec_map, learning_rate = 0.01, num_iterations = 400):
-    """
-    Model to train word vector representations in numpy.
-    
-    Arguments:
-    X -- input data, numpy array of sentences as strings, of shape (m, 1)
-    Y -- labels, numpy array of integers between -1 and 1, numpy-array of shape (m, 1)
-    word_to_vec_map -- dictionary mapping every word in a vocabulary into its 20-dimensional vector representation
-    learning_rate -- learning_rate for the stochastic gradient descent algorithm
-    num_iterations -- number of iterations
-    
-    Returns:
-    pred -- vector of predictions, numpy-array of shape (m, 1)
-    W -- weight matrix of the softmax layer, of shape (n_y, n_h)
-    b -- bias of the softmax layer, of shape (n_y,)
-    """
-    
-    np.random.seed(1)
-
-    # Define number of training examples
-    m = len(Y)                              # number of training examples
-    n_y = 2                                 # number of classes  
-    n_h = 20                                # dimensions of the embeddings vectors 
-    
-    # Initialize parameters using Xavier initialization
-    W = np.random.randn(n_y, n_h) / np.sqrt(n_h)
-    b = np.zeros((n_y,))
-    
-    # Convert Y to Y_onehot with n_y classes
-    Y_oh = one_hot(Y) 
-    
-    # Optimization loop
-    for t in range(num_iterations):                       # Loop over the number of iterations
-        for i in range(m):                                # Loop over the training examples
-        
-            # Average the word vectors of the words from the i'th training example
-            avg = sentence_to_avg(X[i], word_to_vec_map)
-
-            # Forward propagate the avg through the softmax layer
-            z = W @ avg + b
-            a = softmax(z)
-
-            # Compute cost using the i'th training label's one hot representation and "A" (the output of the softmax)
-            cost = - np.sum(Y_oh[i]*np.log(a))
-            
-            # Compute gradients 
-            dz = a - Y_oh[i]
-            dW = np.dot(dz.reshape(n_y,1), avg.reshape(1, n_h))
-            db = dz
-
-            # Update parameters with Stochastic Gradient Descent
-            W = W - learning_rate * dW
-            b = b - learning_rate * db
-        
-        if t % 10 == 0:
-            print("Epoch: " + str(t) + " --- cost = " + str(cost))
-            pred = predict(X, Y, W, b, word_to_vec_map)
-    return W, b
-
 
 def predict(X, Y, W, b, word_to_vec_map):
     """
@@ -191,6 +155,11 @@ def predict(X, Y, W, b, word_to_vec_map):
             Z = np.dot(W, avg) + b
             A = softmax(Z)
             pred[j] = np.argmax(A)
+            
+        if Y[j] == 1:
+            labels[j] = 0
+        else:
+            labels[j] = 1
         
     print("Accuracy: "  + str(np.mean((pred[:] == labels[:]))))#Y.reshape(Y.shape[0],1)[:]))))
     
