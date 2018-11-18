@@ -4,7 +4,8 @@ Accuracy
 ------------- 1. BASELINE: Notebook Version 1 avec dictionnaire du cours et data (pas de preprocessing) -----------------
 -------------------------------------------------------------------------------------------------------------------------
 - Learning rate = 0.005 
-Accuracy_train = 61.% puis stagne
+Accuracy_train = 61% puis stagne
+Accuracy Kaggle = 61%
 
 - Learning rate = 0.05
 Accuracy_train = 0.52% puis stagne
