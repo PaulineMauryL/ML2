@@ -131,7 +131,7 @@ def predict(X, Y, W, b, word_to_vec_map):
     """
     m = len(X)
     pred = np.zeros((m, 1))
-    labels = np.zeros((m, 1))
+    #labels = np.zeros((m, 1))
     
     for j in range(m):                       # Loop over training examples
         
@@ -156,11 +156,11 @@ def predict(X, Y, W, b, word_to_vec_map):
             A = softmax(Z)
             pred[j] = np.argmax(A)
             
-        if Y[j] == 1:
-            labels[j] = 0
-        else:
-            labels[j] = 1
+        #if Y[j] == 1:
+        #    labels[j] = 0
+        #else:
+        #    labels[j] = 1
         
-    print("Accuracy: "  + str(np.mean((pred[:] == labels[:]))))#Y.reshape(Y.shape[0],1)[:]))))
+    print("Accuracy: "  + str(np.mean((pred[:] == Y.reshape(Y.shape[0],1)[:])))) #== labels[:]))))
     
     return pred

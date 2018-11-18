@@ -230,3 +230,31 @@ def predict(X, Y, W, b, word_to_vec_map):
     print("Accuracy: "  + str(np.mean((pred[:] == Y.reshape(Y.shape[0],1)[:]))))
     
     return pred
+
+def create_csv_submission(ids, y_pred, name):
+    """
+    Function taken from helpers of project 1
+    Creates an output file in csv format for submission to kaggle
+    Arguments: ids (event ids associated with each prediction)
+               y_pred (predicted class labels)
+               name (string name of .csv output file to be created)
+    """
+    with open(name, 'w') as csvfile:
+        fieldnames = ['Id', 'Prediction']
+        writer = csv.DictWriter(csvfile, delimiter=",", fieldnames=fieldnames)
+        writer.writeheader()
+        for r1, r2 in zip(ids, y_pred):
+            writer.writerow({'Id':int(r1),'Prediction':int(r2)})
+
+            
+            
+def get_test_data(data):
+    with open(data, "r") as file:
+        X_test = []
+        ids = []
+        for _, line in enumerate(file):
+            ids.append(line.split(',', 1)[0])
+            X_test.append(line.split(',', 1)[1:])
+    return ids, X_test
+#ids, X_test = get_test_data("test_data.txt")
+        
