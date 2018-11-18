@@ -1,0 +1,42 @@
+Accuracy
+
+-------------------------------------------------------------------------------------------------------------------------
+------------- 1. BASELINE: Notebook Version 1 avec dictionnaire du cours et data (pas de preprocessing) -----------------
+-------------------------------------------------------------------------------------------------------------------------
+- Learning rate = 0.005 
+Accuracy_train = 61% puis stagne
+Accuracy Kaggle = 61%
+
+- Learning rate = 0.05
+Accuracy_train = 0.52% puis stagne
+
+Defaults: apprend très vite puis stagne. Peu importe le learning rate. Apprend trop lentement car SGD. 
+
+Idées pour le moment: plus de pre-processing pour avoir quelque chose de plus robuste
+
+----------------------------------------------------------------------------------------------------------------------
+------------- 2. Notebook Version 1 avec dictionnaire du cours et data ( avec preprocessing) -------------------------
+----------------------------------------------------------------------------------------------------------------------
+- Learning rate = 0.005 
+Accuracy_train =
+
+- Learning rate = 0.05
+Accuracy_train = 
+
+Idées: utiliser un autre dictionnaire est peut-être mieux. 
+
+---------------------------------------------------------------------------------------------------------------------
+------------- 3. Notebook Version 3 avec dictionnaire de twitter et data (avec preprocessing) -----------------------
+---------------------------------------------------------------------------------------------------------------------
+JEROME ET AUDREY
+- Learning rate = 0.005 
+Accuracy_train =
+
+- Learning rate = 0.05
+Accuracy_train = 
+
+Defaults, moyenne = pas une variable très stable, 
+Deux phrases très différentes peuvent avoir le même moyenne et pas dire la même chose ex: "Je l'aime à mourir" / "J'aimerais mourir"
+Prend pas en compte ordre des mots et grande importance dans phrase en fait: "Je suis terriblement..." "heureux" ou "inquiet"
+
+Idéée: LSTM

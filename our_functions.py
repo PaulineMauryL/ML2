@@ -1,27 +1,4 @@
 import numpy as np 
-from sklearn.utils import shuffle
-
-def get_data_v2(pos = "./datasets/train_pos.txt", neg = "./datasets/train_neg.txt"):
-    X_pos = read_data("./datasets/train_pos.txt")
-    X_neg = read_data("./datasets/train_neg.txt")
-    X_train = np.concatenate((X_pos, X_neg), axis = 0)
-    
-    Y_pos = np.ones(len(X_pos))
-    Y_neg = np.ones(len(X_neg)) * (-1)
-    Y_train = np.concatenate((Y_pos, Y_neg), axis = 0)
-    
-    X_train_shuffled, Y_train_shuffled = shuffle(X_train, Y_train, random_state=0)
-    
-    return X_train, Y_train
-
-def read_data(data):
-    with open(data, "r") as file:
-        tweets = str()
-        for _,line in enumerate(file):
-            tweets += line
-        tweets = tweets.split('\n')
-        del tweets[-1]
-    return tweets
 
 
 def get_data(neg, pos):
@@ -127,17 +104,17 @@ def sentence_to_avg(tweet, word_to_vec_map,size=20):
     """
     # Split sentence into list of lower case words
     words = [x.lower() for x in tweet.split()]
+    
     # Initialize the average word vector
     avg = np.zeros((size,))
     
-    nb = 0
     # Average the word vectors
     for w in words:
+        
         if w in word_to_vec_map.keys():
             avg += word_to_vec_map[w]
-            nb = nb + 1
-    if nb > 0:
-        avg = avg/nb
+            
+    avg = avg/len(words)
     
     return avg
 
@@ -154,6 +131,7 @@ def predict(X, Y, W, b, word_to_vec_map):
     """
     m = len(X)
     pred = np.zeros((m, 1))
+    #labels = np.zeros((m, 1))
     
     for j in range(m):                       # Loop over training examples
         
@@ -163,20 +141,66 @@ def predict(X, Y, W, b, word_to_vec_map):
         # Average words' vectors
         avg = np.zeros((20,))
         
-    nb = 0
-    # Average the word vectors
-    for w in words:
-        if w in word_to_vec_map.keys():
-            avg += word_to_vec_map[w]
-            nb = nb + 1
-    if nb > 0:
-        avg = avg/nb
+        nb = 0
+        # Average the word vectors
+        for w in words:
+            if w in word_to_vec_map.keys():
+                avg += word_to_vec_map[w]
+                nb = nb + 1
+               
+        if nb > 0:
+            avg = avg/nb
 
-        # Forward propagation
-        Z = np.dot(W, avg) + b
-        A = softmax(Z)
-        pred[j] = np.argmax(A)
+            # Forward propagation
+            Z = np.dot(W, avg) + b
+            A = softmax(Z)
+            pred[j] = np.argmax(A)
+            
+        #if Y[j] == 1:
+        #    labels[j] = 0
+        #else:
+        #    labels[j] = 1
         
-    print("Accuracy: "  + str(np.mean((pred[:] == Y.reshape(Y.shape[0],1)[:]))))
+    print("Accuracy: "  + str(np.mean((pred[:] == Y.reshape(Y.shape[0],1)[:])))) #== labels[:]))))
     
+    return pred
+
+def predict_test(X, W, b, word_to_vec_map):
+    """
+    Given X (sentences) and Y (emoji indices), predict emojis and compute the accuracy of your model over the given set.
+    
+    Arguments:
+    X -- input data containing sentences, numpy array of shape (m, None)
+    Y -- labels, containing index of the label emoji, numpy array of shape (m, 1)
+    
+    Returns:
+    pred -- numpy array of shape (m, 1) with your predictions
+    """
+    m = len(X)
+    pred = np.zeros((m, 1))
+    #labels = np.zeros((m, 1))
+    
+    for j in range(m):                       # Loop over training examples
+        
+        # Split jth test example (sentence) into list of lower case words
+        words = X[j].lower().split()
+        
+        # Average words' vectors
+        avg = np.zeros((20,))
+        
+        nb = 0
+        # Average the word vectors
+        for w in words:
+            if w in word_to_vec_map.keys():
+                avg += word_to_vec_map[w]
+                nb = nb + 1
+               
+        if nb > 0:
+            avg = avg/nb
+
+            # Forward propagation
+            Z = np.dot(W, avg) + b
+            A = softmax(Z)
+            pred[j] = np.argmax(A)
+            
     return pred
