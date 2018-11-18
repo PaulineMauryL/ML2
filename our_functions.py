@@ -1,19 +1,6 @@
 import numpy as np 
 from sklearn.utils import shuffle
 
-def get_data_v2(pos = "./datasets/train_pos.txt", neg = "./datasets/train_neg.txt"):
-    X_pos = read_data("./datasets/train_pos.txt")
-    X_neg = read_data("./datasets/train_neg.txt")
-    X_train = np.concatenate((X_pos, X_neg), axis = 0)
-    
-    Y_pos = np.ones(len(X_pos))
-    Y_neg = np.ones(len(X_neg)) * (-1)
-    Y_train = np.concatenate((Y_pos, Y_neg), axis = 0)
-    
-    X_train_shuffled, Y_train_shuffled = shuffle(X_train, Y_train, random_state=0)
-    
-    return X_train, Y_train
-
 def read_data(data):
     with open(data, "r") as file:
         tweets = str()
@@ -24,62 +11,24 @@ def read_data(data):
     return tweets
 
 
-def get_data(neg, pos):
-    with open(neg, "r") as file: #read only
-        #tweets = list()
-        tweets = str()
-
-        for idx ,line in enumerate(file):
-            #tweets.append(line)
-            tweets+= line
-
-    tweets = tweets.split('\n')
-    del tweets[-1] #deletes last item
-
-    tweets_neg = tweets
-
-    with open(pos, "r") as file: #read only
-        #tweets = list()
-        tweets = str()
-
-        for idx ,line in enumerate(file):
-            #tweets.append(line)
-            tweets+= line
-
-    tweets = tweets.split('\n')
-    del tweets[-1] #deletes last item
-
-    tweets_pos = tweets
-
-    tweets_pos.extend(tweets_neg)
-    X = tweets_pos
-
-    Y_one = [1 for _ in range(int(len(X)/2))]
-    Y_minus_one = [-1 for _ in range(int(len(X)/2)) ]
-    Y = [*Y_one, *Y_minus_one]
+def get_data_v2(pos = "./datasets/train_pos.txt", neg = "./datasets/train_neg.txt"):
+    X_pos = read_data(pos)
+    X_neg = read_data(neg)
+    X_train = np.concatenate((X_pos, X_neg), axis = 0)
     
-    return X, Y
+    Y_pos = np.ones(len(X_pos))
+    Y_neg = np.zeros(len(X_neg))
+    Y_train = np.concatenate((Y_pos, Y_neg), axis = 0)
+    
+    X_train_shuffled, Y_train_shuffled = shuffle(X_train, Y_train, random_state=0)
+    
+    return X_train, Y_train
 
-def train_prepro(X,Y):
-    """remove the tweets that are identical
-       --> we do it only for the train (and not the validation)
-    """
-    for i in range(len(X)-1):
-        while X[i] == X[i+1]:
-            X.pop(i+1)
-            Y.pop(i+1)
-    
-    Y.index(-1)
-    one = np.ones(Y.index(-1), dtype = int)
-    minus_one = (-1)*np.ones( len(Y) - Y.index(-1) , dtype = int)
-    Y = np.r_[one, minus_one]
-    
-    return X,Y
 
 def one_hot(Y):
     Y_hot = np.empty([len(Y), 2])
     Y_hot[Y== 1] = [1, 0]
-    Y_hot[Y==-1] = [0, 1]
+    Y_hot[Y== 0] = [0, 1]
     return Y_hot
 
 def softmax(x):
@@ -129,17 +78,19 @@ def sentence_to_avg(tweet, word_to_vec_map,size=20):
     words = [x.lower() for x in tweet.split()]
     # Initialize the average word vector
     avg = np.zeros((size,))
-    
+
     nb = 0
     # Average the word vectors
     for w in words:
         if w in word_to_vec_map.keys():
             avg += word_to_vec_map[w]
             nb = nb + 1
+    
     if nb > 0:
         avg = avg/nb
     
     return avg
+
 
 def predict(X, Y, W, b, word_to_vec_map):
     """
@@ -154,6 +105,7 @@ def predict(X, Y, W, b, word_to_vec_map):
     """
     m = len(X)
     pred = np.zeros((m, 1))
+    labels = np.zeros((m, 1))
     
     for j in range(m):                       # Loop over training examples
         
@@ -163,20 +115,21 @@ def predict(X, Y, W, b, word_to_vec_map):
         # Average words' vectors
         avg = np.zeros((20,))
         
-    nb = 0
-    # Average the word vectors
-    for w in words:
-        if w in word_to_vec_map.keys():
-            avg += word_to_vec_map[w]
-            nb = nb + 1
-    if nb > 0:
-        avg = avg/nb
+        nb = 0
+        # Average the word vectors
+        for w in words:
+            if w in word_to_vec_map.keys():
+                avg += word_to_vec_map[w]
+                nb = nb + 1
+               
+        if nb > 0:
+            avg = avg/nb
 
-        # Forward propagation
-        Z = np.dot(W, avg) + b
-        A = softmax(Z)
-        pred[j] = np.argmax(A)
+            # Forward propagation
+            Z = np.dot(W, avg) + b
+            A = softmax(Z)
+            pred[j] = np.argmax(A)
         
-    print("Accuracy: "  + str(np.mean((pred[:] == Y.reshape(Y.shape[0],1)[:]))))
+    print("Accuracy: "  + str(np.mean((pred[:] == labels[:]))))#Y.reshape(Y.shape[0],1)[:]))))
     
     return pred
