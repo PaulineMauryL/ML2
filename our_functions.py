@@ -90,7 +90,7 @@ def read_embeddings_vecs(embeddings, vocabulary):
     return words_to_index, index_to_words, word_to_vec_map
 
 
-def sentence_to_avg(tweet, word_to_vec_map,size=20):
+def sentence_to_avg(tweet, word_to_vec_map):
     """
     Converts a sentence (string) into a list of words (strings). Extracts the GloVe representation of each word
     and averages its value into a single vector encoding the meaning of the sentence.
@@ -104,17 +104,17 @@ def sentence_to_avg(tweet, word_to_vec_map,size=20):
     """
     # Split sentence into list of lower case words
     words = [x.lower() for x in tweet.split()]
-    
     # Initialize the average word vector
-    avg = np.zeros((size,))
+    avg = np.zeros(np.shape(list(word_to_vec_map.values())[0])[0],)
     
+    nb = 0
     # Average the word vectors
     for w in words:
-        
         if w in word_to_vec_map.keys():
             avg += word_to_vec_map[w]
-            
-    avg = avg/len(words)
+            nb = nb + 1
+    if nb > 0:
+        avg = avg/nb
     
     return avg
 
