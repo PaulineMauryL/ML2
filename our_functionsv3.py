@@ -65,6 +65,8 @@ def read_glove_vecs(glove_file):
             i = i + 1
     return words_to_index, index_to_words, word_to_vec_map
 
+
+
 def read_embeddings_vecs(embeddings, vocabulary):
     with open(vocabulary, 'rb') as voc:
         vocab = pickle.load(voc)
