@@ -1,10 +1,13 @@
 Accuracy
 
-------------- Version 1 avec cours et data (pas all) -----------------
-- Learning rate = 0.001    Nb iterations = 50
-Accuracy_train = 60.45%
-Accuracy_test_Kaggle = 
+------------- Version 1 avec cours et data (pas propre) -----------------
+- Learning rate = 0.005 
+Accuracy_train = 61.% puis stagne
 
-- Learning rate = 0.05. Nb iterations = 100
-Accuracy_train = 60.45%
-Accuracy_test_Kaggle = 
+- Learning rate = 0.05
+Accuracy_train = 0.52% puis stagne
+
+Defaults: apprend très vite puis stagne. Peu importe le learning rate. Apprend trop lentement car SGD. 
+Moyenne = pas une variable très stable, deux phrases très différentes peuvent avoir le même moyenne et prend pas en compte ordre des mots
+
+Idées pour le moment: plus de pre-processing pour avoir quelque chose de plus robuste

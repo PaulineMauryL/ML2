@@ -1,5 +1,6 @@
 import numpy as np 
 from sklearn.utils import shuffle
+import csv
 
 # --------------------------------------------------------------------
 # ----------------------- Preprocessing ------------------------------
@@ -247,14 +248,12 @@ def create_csv_submission(ids, y_pred, name):
             writer.writerow({'Id':int(r1),'Prediction':int(r2)})
 
             
-            
 def get_test_data(data):
     with open(data, "r") as file:
         X_test = []
         ids = []
         for _, line in enumerate(file):
-            ids.append(line.split(',', 1)[0])
-            X_test.append(line.split(',', 1)[1:])
+            ids.append( line.split(',', 1)[0] )
+            X_test.append( " ".join(line.split(',', 1)[1:] ) )
     return ids, X_test
-#ids, X_test = get_test_data("test_data.txt")
         

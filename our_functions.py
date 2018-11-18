@@ -164,3 +164,43 @@ def predict(X, Y, W, b, word_to_vec_map):
     print("Accuracy: "  + str(np.mean((pred[:] == Y.reshape(Y.shape[0],1)[:])))) #== labels[:]))))
     
     return pred
+
+def predict_test(X, W, b, word_to_vec_map):
+    """
+    Given X (sentences) and Y (emoji indices), predict emojis and compute the accuracy of your model over the given set.
+    
+    Arguments:
+    X -- input data containing sentences, numpy array of shape (m, None)
+    Y -- labels, containing index of the label emoji, numpy array of shape (m, 1)
+    
+    Returns:
+    pred -- numpy array of shape (m, 1) with your predictions
+    """
+    m = len(X)
+    pred = np.zeros((m, 1))
+    #labels = np.zeros((m, 1))
+    
+    for j in range(m):                       # Loop over training examples
+        
+        # Split jth test example (sentence) into list of lower case words
+        words = X[j].lower().split()
+        
+        # Average words' vectors
+        avg = np.zeros((20,))
+        
+        nb = 0
+        # Average the word vectors
+        for w in words:
+            if w in word_to_vec_map.keys():
+                avg += word_to_vec_map[w]
+                nb = nb + 1
+               
+        if nb > 0:
+            avg = avg/nb
+
+            # Forward propagation
+            Z = np.dot(W, avg) + b
+            A = softmax(Z)
+            pred[j] = np.argmax(A)
+            
+    return pred
