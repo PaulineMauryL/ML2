@@ -175,9 +175,8 @@ def model(X, Y, word_to_vec_map, learning_rate = 0.01, num_iterations = 400):
             W = W - learning_rate * dW
             b = b - learning_rate * db
         
-        if t % 10 == 0:
-            print("Epoch: " + str(t) + " --- cost = " + str(cost))
-            pred = predict(X, Y, W, b, word_to_vec_map)
+        print("Epoch: " + str(t) + " --- cost = " + str(cost))
+        pred = predict(X, Y, W, b, word_to_vec_map)
     return W, b
 
 def convert_to_one_hot(Y, C):
@@ -227,10 +226,6 @@ def predict(X, Y, W, b, word_to_vec_map):
             A = softmax(Z)
             pred[j] = np.argmax(A)
             
-        #if Y[j] == 1:
-        #    labels[j] = 0
-        #else:
-        #    labels[j] = 1
         
     print("Accuracy: "  + str(np.mean((pred[:] == Y.reshape(Y.shape[0],1)[:])))) #== labels[:]))))
     
