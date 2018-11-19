@@ -3,6 +3,10 @@ Accuracy
 -------------------------------------------------------------------------------------------------------------------------
 ------------- 1. BASELINE: Notebook Version 1 avec dictionnaire du cours et data (pas de preprocessing) -----------------
 -------------------------------------------------------------------------------------------------------------------------
+- Learning rate = 0.0005 
+Accuracy_train = 60%
+Accuracy Kaggle =
+
 - Learning rate = 0.005 
 Accuracy_train = 61% puis stagne
 Accuracy Kaggle = 61%
@@ -18,15 +22,44 @@ Idées pour le moment: plus de pre-processing pour avoir quelque chose de plus ro
 ------------- 2. Notebook Version 1 avec dictionnaire du cours et data ( avec preprocessing) -------------------------
 ----------------------------------------------------------------------------------------------------------------------
 - Learning rate = 0.005 
-Accuracy_train =
+Accuracy_train = 0.56
+
+- Learning rate = 0.0005 -0.00075 - 0.001
+Accuracy_train = 0.57
 
 - Learning rate = 0.05
-Accuracy_train = 
+Accuracy_train = 0.50
+
+
+----------------------------------------------------------------------------------------------------------------------
+---3. Notebook Version 1 avec dictionnaire du cours et data ( avec preprocessing mais sans enlever stopwords) --------
+----------------------------------------------------------------------------------------------------------------------
+- Learning rate = 0.005 
+Accuracy_train = 0.594
+
+- Learning rate = 0.001
+Accuracy_train = 0.589
+
+- Learning rate = 0.0005
+Accuracy_train = 0.605
+
+- Learning rate = 0.0001
+Accuracy_train = 0.584
+
+
+
+
+
+
+
+
+
+
 
 Idées: utiliser un autre dictionnaire est peut-être mieux. 
 
 ---------------------------------------------------------------------------------------------------------------------
-------------- 3. Notebook Version 3 avec dictionnaire de twitter et data (avec preprocessing) -----------------------
+------------- 4. Notebook Version 3 avec dictionnaire de twitter et data (avec preprocessing) -----------------------
 ---------------------------------------------------------------------------------------------------------------------
 JEROME ET AUDREY
 - Learning rate = 0.005 
@@ -40,3 +73,8 @@ Deux phrases très différentes peuvent avoir le même moyenne et pas dire la même 
 Prend pas en compte ordre des mots et grande importance dans phrase en fait: "Je suis terriblement..." "heureux" ou "inquiet"
 
 Idéée: LSTM
+
+
+
+
+password note hotcpr: aichyuiaeoiuoooeuow

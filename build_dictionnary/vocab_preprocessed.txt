@@ -1,3 +1,5 @@
+      1 ""
+  41552 a
      45 aa
      38 aaa
       1 aaack
@@ -234,11 +236,13 @@
       1 aboudt
       1 abound
       1 abour
+   5222 about
       1 aboutme
       5 abouts
       4 aboutt
       1 aboutyounow
       2 abouut
+     81 above
       6 abovetheinfluence
       2 abowt
       1 aboyfriend
@@ -1113,6 +1117,7 @@
      13 afta
       2 afte
       1 aftee
+   1701 after
       3 afterall
       1 aftercare
       1 aftereffectsofredbull
@@ -1150,9 +1155,11 @@
       2 agai
       1 agaiiin
       1 agaiin
+   2057 again
       5 againn
       8 againnn
       4 agains
+    201 against
       1 agak
       1 agamalu
       1 agan
@@ -1501,6 +1508,7 @@
       1 aimr
      20 aims
       1 aimt
+     12 ain
       2 aina
       5 aine
       2 ainn
@@ -2009,6 +2017,7 @@
       1 alkmaar
       1 alkol
       1 alktheer
+  10509 all
       2 alla
       1 allaaah
       3 allaah
@@ -2368,6 +2377,7 @@
       2 alzclear
       8 alzheimer
       1 alzheimers
+   2906 am
       6 ama
       1 amaa
       1 amaaaze
@@ -2682,6 +2692,7 @@
       9 amzer
       3 amzing
       5 amzn
+   4013 an
      50 ana
       1 anabeeeb
       4 anacardium
@@ -2757,6 +2768,7 @@
       1 ancillary
       1 ancol
       5 ancor
+  36077 and
       3 anda
       1 andaaa
       1 andalan
@@ -3273,6 +3285,7 @@
      15 anxious
       4 anxiously
       1 anxiousness
+   1415 any
       2 anya
       1 anyae
     105 anybody
@@ -3758,6 +3771,7 @@
       1 arduous
       1 ardy
       4 ardyss
+   9872 are
     100 area
       1 arean
      18 areas
@@ -3768,6 +3782,7 @@
       1 arehahahaha
       1 arek
       2 aremarkable
+      2 aren
      42 arena
       1 arenajanuary
       2 arenas
@@ -4100,6 +4115,7 @@
       1 aryonnnaaa
       2 aryt
       2 arzak
+   4359 as
       7 asa
       4 asada
       1 asadito
@@ -4519,6 +4535,7 @@
       1 asyou
       1 asyouwere
       1 asz
+   9816 at
      15 ata
       3 atall
       1 atalll
@@ -6644,6 +6661,7 @@
       8 bdubs
       1 bdubsss
       1 bdw
+  14214 be
      13 bea
       1 beaaatttsss
       1 beaat
@@ -6845,6 +6863,7 @@
       4 becasue
       1 becauae
       1 becaus
+   2021 because
       4 becausee
       5 becauseee
       1 becauseican
@@ -6961,6 +6980,7 @@
       1 beekeeping
       3 beeko
       4 beem
+   3376 been
       1 beena
       1 beenalongtime
       1 beenawhile
@@ -7005,6 +7025,7 @@
       1 befoee
       1 befollowing
       3 befor
+   1224 before
       1 beforee
       1 beforeee
       4 beforehand
@@ -7094,6 +7115,7 @@
       2 beijos
       1 beijun
      67 bein
+   1711 being
       1 beingawimp
       1 beingerica
       1 beingg
@@ -7237,6 +7259,7 @@
       3 belonging
      16 belongs
      39 beloved
+     27 below
       1 bels
       2 belson
      67 belt
@@ -7661,6 +7684,7 @@
       1 betw
       3 betwe
       3 betwee
+    292 between
       1 beucase
       1 beuh
       1 beur
@@ -9539,6 +9563,7 @@
       1 botch
       1 botdf
       1 botequimtuitajoaquim
+    684 both
       1 botha
      70 bother
       1 botherd
@@ -11093,6 +11118,7 @@
       2 busying
       1 busylife
       1 busyyy
+  12629 but
       1 butaa
       1 butandings
      11 butch
@@ -11239,6 +11265,7 @@
       8 bww
      21 bx
       8 bxtch
+   4048 by
       1 byar
       1 byasa
     285 bye
@@ -11684,6 +11711,7 @@
       1 camw
       1 camwhore
       1 camz
+   7322 can
       1 cana
       1 canaccord
       1 canad
@@ -16489,6 +16517,7 @@
       3 cought
       2 coukd
       1 coul
+   2987 could
      24 coulda
       3 couldcry
       1 couldd
@@ -16499,6 +16528,7 @@
       1 couldint
       1 coulditbeimfallinginlove
       1 coulditgetanybetter
+      3 couldn
     125 couldnt
       1 couldnthelpit
       1 couldntlivewithoutthem
@@ -17900,6 +17930,7 @@
       1 czechoslovakia
       2 czechrepublicwantsbelievetour
       1 czek
+   3068 d
     314 da
       1 daa
       2 daaa
@@ -19918,6 +19949,7 @@
       1 diction
       8 dictionaries
      65 dictionary
+   4059 did
       1 dida
       1 didagoodjob
       1 didd
@@ -19933,6 +19965,7 @@
       4 didint
       1 didja
       1 didmt
+      8 didn
     502 didnt
       1 didntthinkso
       6 dido
@@ -20729,6 +20762,7 @@
       1 dntn
       2 dntt
       2 dnw
+  14391 do
       5 doa
       1 doain
       1 doakan
@@ -20793,8 +20827,10 @@
       1 doenn
       1 doent
       1 doernbecher
+   1777 does
       1 doesent
       1 doesevillaugh
+      2 doesn
       1 doesne
     174 doesnt
       1 doesntfeelright
@@ -20843,6 +20879,7 @@
       1 doign
     126 doin
       1 doinbigg
+   1279 doing
       1 doingg
       5 doinggg
       1 doingme
@@ -20931,6 +20968,7 @@
       2 doms
       1 domt
       1 domz
+     73 don
       2 dona
      18 donald
       4 donalds
@@ -21283,6 +21321,7 @@
       3 dowels
       1 dowereallylookthatold
       2 dowling
+   1759 down
       9 downer
       2 downers
       3 downey
@@ -22022,6 +22061,7 @@
       1 duri
       4 durian
       7 durin
+    279 during
       2 duringthesummer
       1 durinq
       2 durkee
@@ -22193,6 +22233,7 @@
       1 eaah
       1 eaat
       6 eac
+    646 each
       1 eaching
       1 eachotha
      56 eachother
@@ -26178,6 +26219,7 @@
       2 feverr
       1 fevers
       1 fevrt
+    645 few
       1 fewd
       1 fewer
       1 feww
@@ -27458,6 +27500,7 @@
       1 footwells
       1 footwork
      19 footy
+  24315 for
       1 fora
       1 foraduck
       2 forager
@@ -28222,6 +28265,7 @@
       2 froi
       1 froiday
       1 frolic
+   5912 from
       1 fromage
       1 frombirth
       1 frome
@@ -28671,6 +28715,7 @@
       1 fursure
       1 furtado
       1 furth
+     34 further
       1 furthers
       2 furthest
       2 furuno
@@ -32195,6 +32240,7 @@
       2 hackney
       6 hacks
       1 hackzall
+   3190 had
       1 hada
       4 hadd
       4 hadda
@@ -33070,6 +33116,7 @@
       2 harveys
       1 harworth
       1 haryana
+   2927 has
       1 hasa
       1 hasan
       7 hasbro
@@ -33093,6 +33140,7 @@
       7 haskell
       1 haskins
       2 hasler
+      1 hasn
       1 hasna
       1 hasnaa
      27 hasnt
@@ -33248,6 +33296,7 @@
       6 havana
       1 havant
       1 havasu
+  14603 have
       1 havea
       2 haveagoodday
       1 haveagooddaytomorrow
@@ -33262,6 +33311,7 @@
       1 havefunatwork
       2 haveing
       1 havelange
+     14 haven
       1 havenbt
       1 havens
     247 havent
@@ -33272,6 +33322,7 @@
       1 havi
       1 havig
      45 havin
+   1194 having
       1 havingfun
       1 havingg
       1 havings
@@ -33421,6 +33472,7 @@
       1 hdusifhdusfh
       2 hdv
       1 hdxx
+   5565 he
      18 hea
       1 heaaad
       1 heaaaddd
@@ -33964,6 +34016,7 @@
       1 hephaestion
       1 hepii
       1 hepl
+   4003 her
       1 heraclitus
      10 herald
       4 heralded
@@ -33984,6 +34037,7 @@
       7 hercules
      10 herd
       2 herds
+   3237 here
       1 hereandnowtour
       9 heree
      18 hereee
@@ -34051,7 +34105,9 @@
       1 herrooo
      13 herrr
       1 herrrooo
+     27 hers
       1 herse
+     34 herself
      18 hershey
       1 hersheys
       2 hertfordshire
@@ -34386,6 +34442,7 @@
       1 hilson
       8 hilton
       1 hilty
+   2930 him
       1 himachal
       2 himalaya
       2 himalayan
@@ -34399,6 +34456,7 @@
       1 himrt
       1 hims
       1 himse
+     59 himself
       4 himym
       2 hin
       1 hinack
@@ -34467,6 +34525,7 @@
       1 hiroyuki
       1 hirts
       1 hirvonen
+   2236 his
       1 hisbabe
       1 hisbabee
       1 hiscuzz
@@ -35370,6 +35429,7 @@
       1 hove
       1 hover
       1 hovered
+   5350 how
       6 howa
       1 howabout
      35 howard
@@ -36029,6 +36089,7 @@
       8 hyung
       1 hyunsik
       8 hz
+ 100083 i
       6 ia
       1 iaaah
       1 iactuallydolovemyjob
@@ -36399,6 +36460,7 @@
       2 ieu
       1 ieva
       1 iexplorer
+   7300 if
       1 ifa
       3 ifac
       2 ifan
@@ -37304,6 +37366,7 @@
       1 imyourluckycharm
       3 imyt
       1 imz
+  23970 in
      38 ina
       1 inaamag
       2 inability
@@ -38302,6 +38365,7 @@
       1 intimidation
       2 intimus
       6 intl
+   1035 into
       1 intolerable
       2 intolerance
       1 intolerant
@@ -38654,6 +38718,7 @@
       2 irvine
       8 irving
       5 irwin
+  25446 is
       7 isa
       5 isaac
       2 isaacs
@@ -38750,6 +38815,7 @@
       1 ismellbacon
       1 ismellparty
       1 ismile
+      1 isn
       1 isnowball
     146 isnt
       1 isntead
@@ -38832,6 +38898,7 @@
      29 iswagtumblr
       2 iswear
       1 isya
+  28003 it
       3 ita
       1 itachi
       1 itaewon
@@ -38943,6 +39010,7 @@
       1 itrm
       2 itrt
       1 itry
+   4861 its
       2 itsabelieberthing
       1 itsablackstarthing
       1 itsabouttime
@@ -38975,6 +39043,7 @@
       8 itscrazyhow
       1 itscutewhen
       1 itsdissapointing
+     38 itself
       1 itselt
       1 itsfancyhuhcul
       2 itsfriday
@@ -40717,6 +40786,7 @@
       1 jussskiddin
       2 jussst
       1 jusst
+  12320 just
       1 justa
       1 justaboutmadeit
       1 justahunch
@@ -45181,6 +45251,7 @@
       1 lkkr
       1 lkl
       1 lks
+     46 ll
       2 llab
       1 llaff
       7 llama
@@ -46571,6 +46642,8 @@
       1 lyx
       1 lyzette
       1 lzzy
+   1007 m
+    354 ma
      33 maa
       3 maaa
       4 maaad
@@ -48452,6 +48525,7 @@
       1 mdu
       2 mdubarmy
       1 mdvihdmimf
+  27658 me
       5 mea
       1 meaaan
       1 meaaat
@@ -50825,6 +50899,7 @@
       1 moray
       3 morbid
       1 mordecai
+   3601 more
       1 morebeautiful
      12 moree
      16 moreee
@@ -50958,6 +51033,7 @@
      18 moss
       2 mossberg
       2 mossy
+   1185 most
       1 mostannoyingthingever
       1 mostar
       1 mostawkwardlyrics
@@ -51870,6 +51946,7 @@
       2 mxt
       1 mxwaaah
       1 mxxxm
+  31819 my
       2 mya
       1 myaddiction
       2 myallergytest
@@ -52028,6 +52105,7 @@
       1 mysa
       1 mysaline
       1 mysel
+    847 myself
       1 myselfff
       1 myselfincluded
       1 myside
@@ -53927,6 +54005,7 @@
       1 nns
       1 nnt
       1 nnti
+   7116 no
      10 noah
       2 noahs
       1 noaltontowers
@@ -54258,6 +54337,7 @@
       2 noprob
       3 noproblem
       1 noquestions
+     45 nor
       7 nora
       2 noraa
       1 norah
@@ -54374,6 +54454,7 @@
       2 nostrils
       1 nosub
       4 nosy
+  10340 not
       1 notability
       7 notable
       1 notacoolkid
@@ -54610,6 +54691,7 @@
       1 novo
       1 novoflex
       1 novoice
+   7492 now
      20 nowadays
       2 nowandthen
       1 nowaplying
@@ -55017,6 +55099,7 @@
       1 nzlilrockerslovereece
       2 nzvaus
       3 nzxt
+   2019 o
       5 oa
       2 oae
       4 oahu
@@ -55241,6 +55324,7 @@
       1 oers
       1 oeste
       3 oetker
+  26907 of
      14 ofc
       1 ofcorse
       1 ofcos
@@ -55251,6 +55335,7 @@
       1 ofend
       1 ofendido
       1 ofengland
+   2600 off
       1 offa
       1 offallwknd
       1 offbeat
@@ -55810,6 +55895,7 @@
       2 omy
       1 omygod
       2 omygosh
+  15696 on
       1 ona
       1 onamia
       1 onanyc
@@ -55819,6 +55905,7 @@
       1 onaysia
       5 onboard
       1 onboarding
+    597 once
       1 oncee
       3 onceuponatime
       1 oncol
@@ -55920,6 +56007,7 @@
       1 onlineshopping
       2 onlt
       1 onlu
+   3349 only
       1 onlyanswear
       1 onlyaustin
       3 onlycategory
@@ -56234,6 +56322,7 @@
       7 optoma
       1 optronics
       4 opus
+   3939 or
       5 ora
       1 oracl
      31 oracle
@@ -56495,6 +56584,7 @@
       3 otha
       5 othe
       2 othello
+   1289 other
       1 othere
       2 otherhalf
       1 otherr
@@ -56545,6 +56635,7 @@
       3 ouchy
       4 oud
       1 ough
+      9 ought
       1 oughta
       9 ouh
       1 ouhh
@@ -56558,6 +56649,7 @@
       1 ound
       1 oupps
       1 oups
+   3874 our
       1 ouran
       1 ouranthem
       1 ourbabiesarebackhome
@@ -56566,9 +56658,11 @@
       1 ourjam
       1 ourladypeace
       2 ourrelationship
+     44 ours
       1 oursecret
       2 ourself
       1 ourselfs
+     25 ourselves
       1 oursong
       1 ourthang
       1 ourtime
@@ -56578,6 +56672,7 @@
       1 ousdhoudshfousdhfodsg
       1 ousted
       1 ousts
+   6567 out
      13 outa
       1 outaa
       1 outaaa
@@ -56704,6 +56799,7 @@
      10 ove
      32 oven
       4 ovens
+   2130 over
       1 overachiever
       5 overacting
      26 overall
@@ -56846,6 +56942,7 @@
       5 owls
       1 owlwhat
       1 owlwild
+    615 own
       1 ownage
       1 owne
      19 owned
@@ -63313,6 +63410,7 @@
       1 rdu
       1 rdvision
       2 rdy
+    175 re
      15 rea
       1 reaaady
       1 reaaadyy
@@ -66370,6 +66468,7 @@
       1 rz
       1 rza
       2 rzr
+   2158 s
     155 sa
       9 saaad
       4 saaame
@@ -66789,6 +66888,7 @@
       1 samco
       1 samconcepcionday
       1 samdasinga
+   1519 same
       1 samedelman
       8 samee
      12 sameee
@@ -68841,6 +68941,7 @@
       3 shams
       3 shamu
       1 shamwow
+      8 shan
       1 shana
       1 shanahan
       1 shanairpic
@@ -69020,6 +69121,7 @@
       1 shcufflemonster
       2 shd
       1 shdsg
+   4675 she
      13 shea
       1 sheabrojae
       1 shead
@@ -69555,6 +69657,7 @@
       1 shoudlve
       1 shouji
       2 shoul
+   2618 should
      59 shoulda
       1 shouldcheermeup
       2 shouldd
@@ -71503,6 +71606,7 @@
       1 snugtub
       1 snuhkummz
       2 snyder
+  17391 so
       3 soa
      11 soak
      30 soaked
@@ -71769,6 +71873,7 @@
       4 sombong
       1 sombrerini
       1 sombrero
+   3423 some
       1 somean
       1 somebady
       2 somebdy
@@ -74411,6 +74516,7 @@
       1 succulent
       1 succumb
       1 sucess
+    869 such
      16 sucha
       2 suchagirl
       1 suchagooddaughter
@@ -75654,6 +75760,7 @@
       1 szechwan
       1 szeyii
       1 szzadok
+    852 t
     877 ta
       2 taa
       5 taaa
@@ -77364,6 +77471,7 @@
       1 thamar
       9 thames
       1 thameside
+   1563 than
       2 thanatos
      68 thang
       2 thangg
@@ -77496,6 +77604,7 @@
       1 tharki
      11 thas
       8 thass
+  18679 that
       1 thata
       1 thatamazingmoment
       1 thatawfulfeeling
@@ -77592,6 +77701,7 @@
       2 thc
       2 thd
      10 thds
+  60387 the
       7 thea
       1 theabba
       1 theagitator
@@ -77698,7 +77808,9 @@
       1 theimportantdecisonsinlife
       1 theincrowd
       1 theinfamous
+   1206 their
       1 theire
+     16 theirs
       1 theirselves
       2 theist
       2 thejerseyshore
@@ -77726,6 +77838,7 @@
       1 theluckone
       1 thelucky
      43 theluckyone
+   3149 them
       1 themacbundles
       2 thematic
       1 themba
@@ -77746,6 +77859,8 @@
       1 themotto
       1 themself
       2 themselv
+     43 themselves
+   3477 then
       1 thence
       1 thenealcouplandexperience
       1 thenew
@@ -77800,6 +77915,7 @@
       3 therapists
       1 therappe
      72 therapy
+   6543 there
       1 therea
       1 thereafter
       1 thereb
@@ -77857,6 +77973,7 @@
       1 thesafpwrbattery
       1 thesame
     132 thesaurus
+   1397 these
       1 thesecretcircle
       1 thesecretlie
       1 thesecretsout
@@ -77923,6 +78040,7 @@
       1 thewildones
       1 theworstfeeling
       1 theworstfeelingever
+   4763 they
       1 theyallhateme
       1 theyare
       1 theycravepercy
@@ -78126,6 +78244,7 @@
       4 thirties
      26 thirty
       2 thirtytwo
+  18165 this
       1 thisalwayshappens
       1 thisaww
       2 thisblows
@@ -78240,6 +78359,7 @@
       1 thort
       1 thorwbacks
       5 thos
+    995 those
       1 thosemomentswhen
       1 thoses
      16 thot
@@ -78361,6 +78481,7 @@
       2 throttle
       6 throu
       2 throug
+    813 through
       1 throughh
       1 throughing
      33 throughout
@@ -79005,6 +79126,7 @@
       1 tnxx
       1 tnxxx
       2 tnyt
+  55863 to
       3 toa
       3 toad
       1 toadie
@@ -79342,6 +79464,7 @@
       1 tonto
      56 tony
       1 tonys
+   5829 too
       2 toobad
       1 toobadhesgay
       1 toobadidontevenhaveone
@@ -81928,6 +82051,7 @@
       1 undefined
       2 undeniable
       1 undeniably
+    303 under
       1 underachiever
       1 underachieving
       5 underage
@@ -82385,6 +82509,7 @@
       1 untenable
       2 unti
       1 untie
+    669 until
      21 untill
       1 untilthenexttime
       1 untimely
@@ -82427,6 +82552,7 @@
       1 uoom
       1 uoood
       1 uou
+   8126 up
       4 upallnight
       1 upallnightgoldinvenezuela
       2 upallnighthp
@@ -83063,6 +83189,7 @@
       2 vcu
       3 vd
       2 vds
+     35 ve
       4 veal
       1 vecation
       1 vecchio
@@ -83287,6 +83414,7 @@
       1 verve
       1 verveelt
       1 vervelend
+   1704 very
       1 verydisappointed
       1 verydrunk
       2 veryfine
@@ -84494,6 +84622,7 @@
       4 wartime
       1 warum
       5 warwick
+  10497 was
      30 wasabi
       1 wasagenuinmistake
       1 wasalam
@@ -84526,6 +84655,7 @@
       1 wasint
       1 wasit
       1 wasitadream
+      1 wasn
     125 wasnt
       1 wasnthimitwasyou
       1 wasntmehonest
@@ -84777,6 +84907,7 @@
       2 wdf
       2 wds
       1 wdw
+   8459 we
       4 wea
       1 weaa
       1 weaboos
@@ -85210,6 +85341,7 @@
       1 weratchet
       1 werddd
       1 werde
+   2011 were
       1 wereawesome
       1 wereclose
       3 weree
@@ -85398,6 +85530,7 @@
       1 wharching
       1 wharris
       2 whassup
+   8052 what
       1 whata
       1 whataap
       1 whatabadone
@@ -85559,6 +85692,7 @@
       1 whehe
       1 whelans
       2 whelp
+   7409 when
       1 whenalexisbored
       1 whenaminot
       1 whenaustingetsfamous
@@ -85577,6 +85711,7 @@
       3 whenwillyou
       1 whenyouwishyourdreamwasreality
       6 wher
+   2094 where
       1 whereabout
       5 whereabouts
       1 whereami
@@ -85630,6 +85765,7 @@
      10 whi
       1 whic
       1 whica
+    627 which
       4 whichever
       1 whichismadefromapples
       1 whicker
@@ -85637,6 +85773,7 @@
       1 whiff
       1 whiid
       3 whil
+    986 while
       5 whilee
       4 whileee
      43 whilst
@@ -85753,6 +85890,7 @@
       1 whizzy
       1 whlb
      12 whn
+   3637 who
      50 whoa
       4 whoaa
       7 whoaaa
@@ -85785,6 +85923,7 @@
       4 wholistic
       1 whollleee
       1 wholly
+     14 whom
       1 whomever
       7 whomp
       1 whomwas
@@ -85859,6 +85998,7 @@
       2 whut
       1 whuts
       1 whuuuttt
+   3908 why
       1 whyalwaysme
       1 whyamiblack
       1 whyareyousofit
@@ -86056,6 +86196,7 @@
       1 wilkesboro
       1 wilkins
       1 wilkos
+   6379 will
       1 willam
       1 willams
       1 willard
@@ -86342,6 +86483,7 @@
       1 witchyo
       1 wite
       1 witg
+  15946 with
       2 withdraw
      15 withdrawal
       9 withdrawals
@@ -86571,6 +86713,7 @@
       1 womppp
       1 wompwomp
       1 womt
+    215 won
       2 wona
       1 wonbin
       1 wondad
@@ -86924,6 +87067,7 @@
       1 woud
       1 wouk
       3 woul
+   3852 would
      33 woulda
       1 wouldaa
       1 wouldagree
@@ -86932,6 +87076,7 @@
       2 woulddd
       1 woulddoabsolutleyanthyingforaretweet
       1 wouldloveart
+      1 wouldn
      87 wouldnt
       1 wouldntchangeitforanything
       1 wouldntitbenice
@@ -87523,6 +87668,7 @@
       1 xyston
       3 xyz
       1 xzxx
+    449 y
    1100 ya
      63 yaa
      55 yaaa
@@ -88229,6 +88375,7 @@
       4 yot
       1 yotoko
       1 yotrolololol
+  51854 you
       2 youaintnogoodif
       1 youaintshitt
       1 youallrock
@@ -88380,6 +88527,7 @@
       1 youpassed
       8 youprobablyshouldnt
       1 youpunya
+  10918 your
       3 youramazing
       1 yourannoying
       1 yourawesome
@@ -88426,7 +88574,10 @@
       4 yourock
       3 yourr
       2 yourrr
+    355 yours
       1 yoursel
+    373 yourself
+      4 yourselves
       2 yoursexisweak
       1 yoursick
       1 yoursillly
