@@ -1,4 +1,4 @@
-Accuracy
+Accuracy de tous les résultats
 
 -------------------------------------------------------------------------------------------------------------------------
 ------------- 1. BASELINE: Notebook Version 1 avec dictionnaire du cours et data (pas de preprocessing) -----------------
@@ -47,17 +47,12 @@ Accuracy_train = 0.605
 Accuracy_train = 0.584
 
 
-
-
-
-
-
-
-
-
-
 Idées: utiliser un autre dictionnaire est peut-être mieux. 
 
+
+
+*********************************************************************************************************************
+*********************************************************************************************************************
 ---------------------------------------------------------------------------------------------------------------------
 ------------- 4. Notebook Version 3 avec dictionnaire de twitter et data (avec preprocessing) -----------------------
 ---------------------------------------------------------------------------------------------------------------------
@@ -72,8 +67,35 @@ Defaults, moyenne = pas une variable très stable,
 Deux phrases très différentes peuvent avoir le même moyenne et pas dire la même chose ex: "Je l'aime à mourir" / "J'aimerais mourir"
 Prend pas en compte ordre des mots et grande importance dans phrase en fait: "Je suis terriblement..." "heureux" ou "inquiet"
 
-Idéée: LSTM
+Idée: RNN and in particular, LSTM
 
+
+*********************************************************************************************************************
+*********************************************************************************************************************
+
+
+---------------------------------------------------------------------------------------------------------------------
+------------- 5. Notebook LSTM avec 1ere version:  data pas preprocessed et glove 50d.        -----------------------
+---------------------------------------------------------------------------------------------------------------------
+(not data full, only train_pos and train_neg)
+--> 30 epochs 
+	- Train:
+	- Test on Kaggle:
+	in this case, kept history to find where overfitting begins
+
+
+---------------------------------------------------------------------------------------------------------------------
+------------- 6. Notebook LSTM avec 1ere version:  data preprocessed et glove 50d.            -----------------------
+---------------------------------------------------------------------------------------------------------------------
+(not data full, only train_pos and train_neg)
+--> 50 epochs
+	- Train: 0.92
+	- Test on Kaggle: 0.75
+
+--> 30 epochs 
+	- Train:
+	- Test on Kaggle:
+	in this case, kept history to find where overfitting begins
 
 
 
