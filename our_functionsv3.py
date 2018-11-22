@@ -20,7 +20,7 @@ def get_data(pos = "./datasets/train_pos.txt", neg = "./datasets/train_neg.txt")
     return X_train_shuffled, Y_train_shuffled
 
 def read_data(data):
-    with open(data, "r") as file:
+    with open(data, "r",encoding="latin1") as file:
         tweets = str()
         for _,line in enumerate(file):
             tweets += line
