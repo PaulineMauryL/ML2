@@ -1,3 +1,8 @@
+import numpy as np
+import pandas as pd
+from plots_file import *
+from our_functionsv3 import *
+
 np.random.seed(0)
 import tensorflow.keras as keras
 from keras.models import Model
@@ -182,7 +187,7 @@ def smiley_LSTM(input_shape, word_to_vec_map, word_to_index, dropout_rate):
 
 
 
-def complete_model(word_to_vec_map, word_to_index, max_length, summary = False, dropout_rate = 0.5, batch_size = 128, 
+def complete_model(X_train_indices, Y_train_oh, word_to_vec_map, word_to_index, max_length, summary = False, dropout_rate = 0.5, batch_size = 128, 
                    epochs = 50, loss ='categorical_crossentropy', optimizer ='adam'):
     
     model = smiley_LSTM((max_length,), word_to_vec_map, word_to_index, dropout_rate)
