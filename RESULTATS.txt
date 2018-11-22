@@ -75,28 +75,35 @@ Idée: RNN and in particular, LSTM
 
 
 ---------------------------------------------------------------------------------------------------------------------
-------------- 5. Notebook LSTM avec 1ere version:  data pas preprocessed et glove 50d.        -----------------------
+------------- 5. Notebook LSTM avec YJ version:  data pas preprocessed et glove 50d.        -----------------------
 ---------------------------------------------------------------------------------------------------------------------
 (not data full, only train_pos and train_neg)
---> 30 epochs 
+--> early stopping 
 	- Train:
-	- Test on Kaggle:
-	in this case, kept history to find where overfitting begins
+	- Test on Kaggle: 0.49
 
 
 ---------------------------------------------------------------------------------------------------------------------
-------------- 6. Notebook LSTM avec 1ere version:  data preprocessed et glove 50d.            -----------------------
+------------- 6. Notebook LSTM avec YJ version:  data preprocessed et glove 50d.            -----------------------
 ---------------------------------------------------------------------------------------------------------------------
 (not data full, only train_pos and train_neg)
 --> 50 epochs
 	- Train: 0.92
 	- Test on Kaggle: 0.75
+	Model took 800s * 50 to train
 
---> 30 epochs 
+--> early stopping at epochs  
 	- Train:
-	- Test on Kaggle:
-	in this case, kept history to find where overfitting begins
+	- Test on Kaggle: 0.777
+	in this case, kept history 
+	Model took 6995.441886663437 seconds to train
 
+
+
+TO TRY:
+loss = binary crossentropy
+dictionnaire de twitter
+full dataset
 
 
 password note hotcpr: aichyuiaeoiuoooeuow
