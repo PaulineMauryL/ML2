@@ -79,12 +79,19 @@ Idée: RNN and in particular, LSTM
 ---------------------------------------------------------------------------------------------------------------------
 (not data full, only train_pos and train_neg)
 --> early stopping 
-	- Train:
 	- Test on Kaggle: 0.49
+
+---------------------------------------------------------------------------------------------------------------------
+-------- 6. Notebook LSTM avec YJ version:  data preprocessed avec chiffres et signes seulement et glove 50d.        ----------
+---------------------------------------------------------------------------------------------------------------------
+(not data full, only train_pos and train_neg)
+--> early stopping 
+	- Train: 0.82  (3h20)
+	- Test on Kaggle: SUBMIT submission_model__without_nb_and_symbols.csv
 
 
 ---------------------------------------------------------------------------------------------------------------------
-------------- 6. Notebook LSTM avec YJ version:  data preprocessed et glove 50d.            -----------------------
+------------- 7. Notebook LSTM avec YJ version:  data preprocessed et glove 50d.            -----------------------
 ---------------------------------------------------------------------------------------------------------------------
 (not data full, only train_pos and train_neg)
 --> 50 epochs
