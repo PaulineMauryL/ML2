@@ -175,10 +175,10 @@ def smiley_LSTM(input_shape, word_to_vec_map, word_to_index, dropout_rate):
     X = Dropout(dropout_rate)(X)
     
     # Propagate X through a Dense layer with softmax activation to get back a batch of 2-dimensional vectors.
-    X = Dense(2)(X)
+    X = Dense(1)(X)
     
     # Add a softmax activation
-    X = Activation('softmax')(X)
+    X = Activation('sigmoid')(X)
 
     # Create Model instance which converts sentence_indices into X.
     model = Model(inputs = sentence_indices, outputs = X)
@@ -215,4 +215,16 @@ def predict_lstm(model, X_test_indices):
     for i in range(len(X_test_indices)):
         label[i] = np.argmax(y_pred[i])
     label[label == 0] = -1
+    return label
+
+def new_predict_lstm(model, X_test_indices):
+    
+    y_pred = model.predict(X_test_indices)
+    label = np.zeros([X_test_indices.shape[0], 1])
+    
+    for i in range(len(X_test_indices)):
+        if(y_pred[i] < 0.5):
+            label[i] = -1
+        else:
+            label[i] = 1
     return label
