@@ -45,6 +45,8 @@ def sentences_to_indices(X, word_to_index, max_length):
     # Initialize X_indices as a numpy matrix of zeros and the correct shape (≈ 1 line)
     X_indices = np.zeros((m, max_length))
     
+    i=0
+    
     for i in range(m):                               # loop over training examples        
         # Convert the ith training sentence in lower case and split is into words. You should get a list of words.
         sentence_words = [x.lower() for x in X[i].split()]
@@ -59,7 +61,7 @@ def sentences_to_indices(X, word_to_index, max_length):
                 X_indices[i, j] = word_to_index[w]
                 j = j + 1
             else:
-                pass
+                i = i + 1
                 #X_indices[i, j] = -1   #si il ne connait pas le mot il met -1, voir comment on gère ça après
                 # Increment j to j + 1
                 #print("{}   not in twitter dataset".format(w))
@@ -72,6 +74,8 @@ def sentences_to_indices(X, word_to_index, max_length):
             # Increment j to j + 1
             j = j+1
         '''
+    print("{} words were not in the dictionary".format(i))
+    
     return X_indices
 
 
@@ -175,10 +179,10 @@ def smiley_LSTM(input_shape, word_to_vec_map, word_to_index, dropout_rate):
     X = Dropout(dropout_rate)(X)
     
     # Propagate X through a Dense layer with softmax activation to get back a batch of 2-dimensional vectors.
-    X = Dense(2)(X)
+    X = Dense(1)(X)
     
     # Add a softmax activation
-    X = Activation('softmax')(X)
+    X = Activation('sigmoid')(X)
 
     # Create Model instance which converts sentence_indices into X.
     model = Model(inputs = sentence_indices, outputs = X)
@@ -215,4 +219,16 @@ def predict_lstm(model, X_test_indices):
     for i in range(len(X_test_indices)):
         label[i] = np.argmax(y_pred[i])
     label[label == 0] = -1
+    return label
+
+def new_predict_lstm(model, X_test_indices):
+    
+    y_pred = model.predict(X_test_indices)
+    label = np.zeros([X_test_indices.shape[0], 1])
+    
+    for i in range(len(X_test_indices)):
+        if(y_pred[i] < 0.5):
+            label[i] = -1
+        else:
+            label[i] = 1
     return label
