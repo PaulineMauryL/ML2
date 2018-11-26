@@ -179,10 +179,10 @@ def smiley_LSTM(input_shape, word_to_vec_map, word_to_index, dropout_rate):
     X = Dropout(dropout_rate)(X)
     
     # Propagate X through a Dense layer with softmax activation to get back a batch of 2-dimensional vectors.
-    X = Dense(1)(X)
+    X = Dense(2)(X)
     
     # Add a softmax activation
-    X = Activation('sigmoid')(X)
+    X = Activation('softmax')(X)
 
     # Create Model instance which converts sentence_indices into X.
     model = Model(inputs = sentence_indices, outputs = X)
