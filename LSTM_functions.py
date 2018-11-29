@@ -44,8 +44,8 @@ def sentences_to_indices(X, word_to_index, max_length):
 
     # Initialize X_indices as a numpy matrix of zeros and the correct shape (≈ 1 line)
     X_indices = np.zeros((m, max_length))
-    
-    notfound=0
+
+    counter=0
     
     for i in range(m):                               # loop over training examples        
         # Convert the ith training sentence in lower case and split is into words. You should get a list of words.
@@ -61,7 +61,8 @@ def sentences_to_indices(X, word_to_index, max_length):
                 X_indices[i, j] = word_to_index[w]
                 j = j + 1
             else:
-                notfound = notfound + 1
+
+                counter = counter + 1
                 #X_indices[i, j] = -1   #si il ne connait pas le mot il met -1, voir comment on gère ça après
                 # Increment j to j + 1
                 #print("{}   not in twitter dataset".format(w))
@@ -74,7 +75,8 @@ def sentences_to_indices(X, word_to_index, max_length):
             # Increment j to j + 1
             j = j+1
         '''
-    print("{} words were not in the dictionary".format(notfound))
+
+    print("{} words were not in the dictionary".format(counter))
     
     return X_indices
 
