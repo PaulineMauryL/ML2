@@ -72,7 +72,7 @@ def read_glove_vecs_only_alpha(glove_file):
         for line in f:
             line = line.strip().split()
             curr_word = line[0]
-            if curr_word.isalpha():
+            if curr_word.isalpha() or curr_word.startswith("#"):
                 words.add(curr_word)
                 word_to_vec_map[curr_word] = np.array(line[1:], dtype=np.float64)
         
