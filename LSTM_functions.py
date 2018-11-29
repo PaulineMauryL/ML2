@@ -44,7 +44,7 @@ def sentences_to_indices(X, word_to_index, max_length):
 
     # Initialize X_indices as a numpy matrix of zeros and the correct shape (≈ 1 line)
     X_indices = np.zeros((m, max_length))
-    
+
     counter=0
     
     for i in range(m):                               # loop over training examples        
@@ -61,6 +61,7 @@ def sentences_to_indices(X, word_to_index, max_length):
                 X_indices[i, j] = word_to_index[w]
                 j = j + 1
             else:
+
                 counter = counter + 1
                 #X_indices[i, j] = -1   #si il ne connait pas le mot il met -1, voir comment on gère ça après
                 # Increment j to j + 1
@@ -74,6 +75,7 @@ def sentences_to_indices(X, word_to_index, max_length):
             # Increment j to j + 1
             j = j+1
         '''
+
     print("{} words were not in the dictionary".format(counter))
     
     return X_indices
