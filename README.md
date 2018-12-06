@@ -12,34 +12,36 @@ The purpose of this project is to predict if a tweet message used to contain a p
        - Open Anaconda Prompt <br />
        - Type the following command : <br />
        <pre>
-             conda create -n tensorflow pip python=3.6 <br />
-       </pre>
+             conda create -n tensorflow pip python=3.6 <br /> </pre>
        - Then type the following command : <br />
        <pre>
-             activate tensorflow <br />
-       </pre>
+             activate tensorflow <br /> </pre>
    or b) Download [tensorflow](https://www.tensorflow.org/install/)
 
 3) Install nltk :
     - Open Anaconda Prompt
     - Type the following command : <br />
-          pip install nltk
+    <pre>
+          pip install nltk </pre>
 4) Download [nltk](https://www.nltk.org/data.html)
 
 5) Install stopwords :
     - Open Anaconda Prompt
     - Type the following command : <br />
-          pip install stopwords
+    <pre>
+          pip install stopwords </pre>
     
 6) Install pandas : 
     - Open Anaconda Prompt
     - Type the following command : <br />
-          pip install pandas
+    <pre>
+          pip install pandas </pre>
       
 7) Install matplotlib : //PAS NECESSAIRE JE CROIS
     - Open Anaconda Prompt
     - Type the following command : <br />
-          pip install matplotlib
+    <pre>
+          pip install matplotlib <\pre>
             
 8) Download [glove.twitter.27B.zip](https://nlp.stanford.edu/projects/glove/)
 
