@@ -11,9 +11,13 @@ The purpose of this project is to predict if a tweet message used to contain a p
    a) Create a new [anaconda environment with tensorflow](https://towardsdatascience.com/setup-an-environment-for-machine-learning-and-deep-learning-with-anaconda-in-windows-5d7134a3db10) following step 6. <br />
        - Open Anaconda Prompt <br />
        - Type the following command : <br />
+       <pre>
              conda create -n tensorflow pip python=3.6 <br />
+       </pre>
        - Then type the following command : <br />
+       <pre>
              activate tensorflow <br />
+       </pre>
    or b) Download [tensorflow](https://www.tensorflow.org/install/)
 
 3) Install nltk :
