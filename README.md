@@ -37,7 +37,7 @@ The purpose of this project is to predict if a tweet message used to contain a p
     <pre>
           pip install pandas </pre>
       
-7) Install matplotlib : //PAS NECESSAIRE JE CROIS
+7) Install matplotlib :
     - Open Anaconda Prompt
     - Type the following command : <br />
     <pre>
