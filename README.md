@@ -9,27 +9,27 @@ The purpose of this project is to predict if a tweet message used to contain a p
 1) Download [training and testing set](https://www.crowdai.org/challenges/epfl-ml-text-classification/dataset_files) from kaggle
 
 2) Download tensorflow by either :
-   a) Create a new [anaconda environment with tensorflow](https://towardsdatascience.com/setup-an-environment-for-machine-learning-and-deep-learning-with-anaconda-in-windows-5d7134a3db10) following step 6.
-       - Open Anaconda Prompt
-       - type the following commands :
-         conda create -n tensorflow pip python=3.6
-         activate tensorflow
+   a) Create a new [anaconda environment with tensorflow](https://towardsdatascience.com/setup-an-environment-for-machine-learning-and-deep-learning-with-anaconda-in-windows-5d7134a3db10) following step 6. <br />
+       - Open Anaconda Prompt <br />
+       - type the following commands : <br />
+         conda create -n tensorflow pip python=3.6 <br />
+         activate tensorflow <br />
    or b) Download [tensorflow](https://www.tensorflow.org/install/)
 
 3) Install nltk :
     - Open Anaconda Prompt
-    - Type the following command :
+    - Type the following command : <br />
       pip install nltk
 4) Download [nltk](https://www.nltk.org/data.html)
 
 5) Install stopwords :
     - Open Anaconda Prompt
-    - Type the following command : 
+    - Type the following command : <br />
       pip install stopwords
     
 6) Install pandas : 
     - Open Anaconda Prompt
-    - Type the following command : 
+    - Type the following command : <br />
       pip install pandas
       
 7) Install matplotlib : //PAS NECESSAIRE JE CROIS
