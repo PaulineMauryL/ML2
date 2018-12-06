@@ -10,10 +10,10 @@ The purpose of this project is to predict if a tweet message used to contain a p
 2) Download tensorflow by either : <br />
    a) Create a new [anaconda environment with tensorflow](https://towardsdatascience.com/setup-an-environment-for-machine-learning-and-deep-learning-with-anaconda-in-windows-5d7134a3db10) following step 6. <br />
        - Open Anaconda Prompt <br />
-       - Type the following command : <br />
+       - Type the following command :
        <pre>
              conda create -n tensorflow pip python=3.6 </pre> <br />
-       - Then type the following command : <br />
+       - Then type the following command :
        <pre>
              activate tensorflow </pre> <br />
    or b) Download [tensorflow](https://www.tensorflow.org/install/)
