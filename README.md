@@ -43,7 +43,7 @@ The purpose of this project is to predict if a tweet message used to contain a p
     <pre>
           pip install matplotlib </pre>
             
-8) Download [glove.twitter.27B.zip](https://nlp.stanford.edu/projects/glove/)
+8) Download the dictionary [glove.twitter.27B.zip](https://nlp.stanford.edu/projects/glove/)
 
 ## Project files
 
