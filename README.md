@@ -30,26 +30,20 @@ The purpose of this project is to predict if a tweet message used to contain a p
     - Type the following command : <br />
     <pre>
           pip install msgpack </pre>
-
-6) Install stopwords :
-    - Open Anaconda Prompt
-    - Type the following command : <br />
-    <pre>
-          pip install stopwords </pre>
     
-7) Install pandas : 
+6) Install pandas : 
     - Open Anaconda Prompt
     - Type the following command : <br />
     <pre>
           pip install pandas </pre>
       
-8) Install matplotlib :
+7) Install matplotlib :
     - Open Anaconda Prompt
     - Type the following command : <br />
     <pre>
           pip install matplotlib </pre>
             
-9) Download the dictionary [glove.twitter.27B.zip](https://nlp.stanford.edu/projects/glove/)
+8) Download the dictionary [glove.twitter.27B.zip](https://nlp.stanford.edu/projects/glove/)
 
 ## Project files
 
