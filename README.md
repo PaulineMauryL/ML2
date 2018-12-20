@@ -2,6 +2,7 @@
 
 The purpose of this project is to predict if a tweet message used to contain a positive :) or negative :( smiley, by considering only the remaining text.
 
+The following procedure leads to a result of 85.2\% on the challenge crowdAi.org. The submission ID is: 24569 under the name Audrey Jordan.
 
 ## Prerequisites
 
