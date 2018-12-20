@@ -57,7 +57,7 @@ The architecture and weights from the trained model model_0852.h5 came from our 
 It contains necessary functions to compute LSTM.
 
 ### preprocessing.py
-It contains all the required functions for the preprocessing. The function full_preprocessing() operates the complete preprocessing and full_preprocessing_test() operates the complete preprocessing only on the test dataset.
+It contains all the required functions for the preprocessing. The function full_preprocessing() operates the complete preprocessing and the function full_preprocessing_test() operates the complete preprocessing only on the test dataset.
 
 #### Prerequisites :
 The file 'test_data.txt' must be in a folder called 'twitter-dataset'.
