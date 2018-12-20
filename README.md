@@ -81,7 +81,7 @@ It operates the classification of the testing dataset.
 #### Prerequisites :
 All the prerequisites of the previous files must be fulfilled.
 
-## To get the submmission file
+## To get the submission file
 
 Once the prerequisites are fulfilled (mainly downloading the project zip and having a tensorflow environnemnet), the submission file is produced by simply executing the file run.py
 
