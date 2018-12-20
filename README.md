@@ -13,7 +13,7 @@ The architecture and weights from the trained model model_0852.h5 came from our 
 
 3) The training and testing set came from: [Kaggle](https://www.crowdai.org/challenges/epfl-ml-text-classification/dataset_files) in the folder twitter-datasets. 
 
-4) The architecture and weights of the trained model: model_0852.h5 . It is located in the folder twitter-datasets. 
+4) The architecture and weights of the trained model are stored in model_0852.h5 . It is located in the folder twitter-datasets. 
 
 5) Download tensorflow by either : <br />
    a) Create a new [anaconda environment with tensorflow](https://towardsdatascience.com/setup-an-environment-for-machine-learning-and-deep-learning-with-anaconda-in-windows-5d7134a3db10) following step 6. <br />
